@@ -1,17 +1,5 @@
 #include "push_swap.h"
 
-void printList(t_dlst *sentinel) {
-    if (sentinel == NULL) {
-        return;
-    }
-    t_dlst *current = sentinel->next;
-    while (current != sentinel) {
-        printf("%ld ", current->value);
-        current = current->next;
-    }
-    printf("\n");
-}
-
 int main(int argc, char *argv[])
 {
 	int		is_error;
@@ -31,14 +19,9 @@ int main(int argc, char *argv[])
 		newNode = createNode(val);
 		appendNode(a, newNode);
 	}
-	printf("a: ");
+	algo_naive(a, b);
 	printList(a);
-	printf("b: ");
-	printList(b);
-	rra(a);
-	printf("a: ");
-	printList(a);
-	printf("b: ");
+	printf("\n");
 	printList(b);
 
 }

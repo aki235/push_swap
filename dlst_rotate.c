@@ -17,4 +17,5 @@ void	ra(t_dlst *a)
 	second -> prev = a;
 	a -> prev = first;
 	a -> next = second;
+	printf("ra\n");
 }
